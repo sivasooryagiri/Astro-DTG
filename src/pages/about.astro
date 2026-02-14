@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
 
 const pageTitle = "About Dead Tech Guy";
 const identity = {
@@ -36,9 +38,7 @@ const skillColor = "green";
         </style>
 	</head>
 	<body>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/blog">Blog</a>
+        <Header />
 		<h1>About The DTG Guy,</h1>
         <h2>Learn more {pageTitle}'s journey and projects.</h2>
         <p>This page provides information about the Dead Tech Guy's background, projects, and contributions to the tech community.</p>
@@ -57,5 +57,10 @@ const skillColor = "green";
         {happy && <p>The Dead Tech Guy is happy to share his knowledge and experiences with the community!</p>}
         {!finished && <p>There are still many projects and goals that the Dead Tech Guy is working on. Stay tuned for updates!</p>}
         {goal > 0 ? <p>The Dead Tech Guy has set a goal to complete {goal} more projects this year.</p> : <p>The Dead Tech Guy has achieved all his goals for this year!</p>}
+   
+        <Footer />
+        <script>
+			import '../scripts/menu.js';
+		</script>
     </body>
 </html>

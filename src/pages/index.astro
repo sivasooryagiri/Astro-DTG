@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
 const pageTitle = " Dead Tech Guy";
 ---
 
@@ -13,8 +15,13 @@ const pageTitle = " Dead Tech Guy";
 		<title>Astro</title>
 	</head>
 	<body>
-		<a href="/">Home</a>
-        <a href="/about">About</a>
-		<h1>{pageTitle}y</h1>
+		<Header />
+			<h1>{pageTitle}y</h1>
+		<Footer/>
+
+		  <script>
+			import '../scripts/menu.js';
+		  </script>
+
 	</body>
 </html>
